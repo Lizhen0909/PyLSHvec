@@ -1,0 +1,8 @@
+.settings
+*.o
+*.pyc
+*.so
+*.a
+*.class
+core
+/Debug/
