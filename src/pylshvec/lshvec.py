@@ -32,13 +32,15 @@ class LSHVec(object):
             jnius_config.add_options(*args)
 
         
+    def __to_java_stirng (self,s):
+        return self.autoclass("java.lang.String")(s)
     def __init__(self, model_file, hash_file, threshold=0.005, max_results=500, batch_size=1024,
                  num_thread=1, only_show_main_tax=False, without_uncult=True):
 
         from jnius import autoclass
         self.autoclass = autoclass
-        PyLSHVec = autoclass('net.jfastseq.PyLSHVec')
-        jlshvec = PyLSHVec(model_file, hash_file)
+        PyLSHVec = self.autoclass("net.jfastseq.PyLSHVec")
+        jlshvec = PyLSHVec(self.__to_java_stirng(model_file), self.__to_java_stirng(hash_file))
         
         jlshvec.setThreshold(threshold)
         jlshvec.setMaxItems(max_results)
@@ -135,6 +137,9 @@ class LSHVec(object):
 
     def getRank(self, nid):
         return self.model.getRank(nid);
+
+    def hashTaxId(self, nid):
+        return self.model.hasNode(nid);
     
     def getTaxIdPath(self, nid):
         return self.model.getTaxIdPath(nid);
