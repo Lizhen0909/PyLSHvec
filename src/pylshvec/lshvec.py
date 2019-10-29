@@ -96,7 +96,7 @@ class LSHVec(object):
         
         seq_or_seqs = self.__sub_seqs(seq_or_seqs)
         
-        ret = [self.model.getEmbedding(u) for u in seq_or_seqs]
+        ret = [self.model.getEmbedding(self.__to_java_stirng(u)) for u in seq_or_seqs]
 
         if is_str:
             return ret[0]
@@ -115,7 +115,7 @@ class LSHVec(object):
         
         seq_or_seqs = self.__sub_seqs(seq_or_seqs)
         
-        ret = [self.model.predict(u) for u in seq_or_seqs]
+        ret = [self.model.predict(self.__to_java_stirng(u)) for u in seq_or_seqs]
 
         def f(line):
             line = [u.split(':') for u in line.split()]
@@ -140,7 +140,7 @@ class LSHVec(object):
             seq_or_seqs = [seq_or_seqs]
         
         seq_or_seqs = self.__sub_seqs(seq_or_seqs)
-        
+        seq_or_seqs = [self.__to_java_stirng(u) for u in seq_or_seqs]
         ret = self.model.getEmbedding(seq_or_seqs)
 
         if is_str:
@@ -159,7 +159,8 @@ class LSHVec(object):
             seq_or_seqs = [seq_or_seqs]
         
         seq_or_seqs = self.__sub_seqs(seq_or_seqs)
-        # seq_or_seqs = self.__collection_to_arraylist(seq_or_seqs)
+        seq_or_seqs = [self.__to_java_stirng(u) for u in seq_or_seqs]
+
         ret = self.model.predict(seq_or_seqs)
 
         def f(line):
