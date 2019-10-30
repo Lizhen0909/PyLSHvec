@@ -17,11 +17,19 @@ Python codes and examples to uses these models are also provided.
 
 ## Pre-trained model
 
-### refdb virus classfication model
+### refdb viruses classfication model
+
+* model file: [refdb_viruses_model_gs_k23_l3000_rand_model_299](https://www.amazon.com/clouddrive/share/RmoJ1lduzlqstAJFnKg0aAlx82AyCjnzKncfGjQIQMg) [size: 5.3G]
+
+  **md5sum** 2502b284b336734300c2297d23d1d349 
+
+* hash function file: [lsh_nt_NonEukaryota_k23_h25.crp](https://www.amazon.com/clouddrive/share/6ZNvMXMy30b4vc0RYNVG1lbf1ih8WgpoQ9w4lX91IXy)
+
+  **md5sum** 5eea8a98d224b7ff505091bd483ca75c 
 
 ## Sample data
 
-* ActinoMock Nanopore Sample [file size: 500M].
+* ActinoMock Nanopore Sample [size: 500M].
 
   The data is used in example notebook [example_use_vectors_in_bacteria_classfication_model.ipynb](notebook/example_use_vectors_in_bacteria_classfication_model.ipynb).
   
