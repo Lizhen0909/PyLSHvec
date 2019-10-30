@@ -65,7 +65,7 @@ For more complete examples please see the notebooks:
 
 ## Download 
 
-### JLSHvec jar file
+### JLSHVec jar file
   The pre-trained models were trained with a rewritten  [LSHVec](https://github.com/Lizhen0909/LSHVec) in java. 
   The assembly jar file is needed to load the models.
 
@@ -82,8 +82,8 @@ For more complete examples please see the notebooks:
 Here are issues I can think of:
 
 * Some NCBI taxonomy id may never be predicted since not all ids have train data.
-* Data is not balanced. Some ids (e.g. a specified species) have much more data than other ids, which makes  prediction may prefer to the rich-data ids.
-* Strain (even some species) prediction is terrible. Don't expected it.
+* Data is not balanced. Some ids (e.g. a specified species) have much more data than others, which makes prediction may prefer to the rich-data ids.
+* Strain (even some species) prediction is terrible. Don't expect it.
 
 
 #### RefDB viruses classfication model
