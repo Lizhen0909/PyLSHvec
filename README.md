@@ -15,6 +15,25 @@ Python codes and examples to uses these models are also provided.
 2. Jnius >=1.1.0
 3. java >=1.8
 
+## Install
+
+### build from source
+```bash
+git clone https://github.com/Lizhen0909/PyLSHvec.git && cd pylshvec && python setup.py install
+```
+
+### use pip
+```bash
+pip install pylshvec
+```
+
+### use docker
+```bash
+docker pull lizhen0909/pylshvec
+```
+
+
+
 ## Download 
 
 ### JLSHvec jar file
