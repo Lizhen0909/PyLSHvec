@@ -75,9 +75,20 @@ For more complete examples please see the notebooks:
 
 
 
-### Pre-trained model
+### Pre-trained models
 
-#### refdb viruses classfication model
+**Be Warned** that like all the machine learning models, the model cannot preform better beyond the data. If your data is significant other than the pre-trained model data, training your own model is preferred. 
+
+Here are issues I can think of:
+
+* Some NCBI taxonomy id may never be predicted since not all ids have train data.
+* Data is not balanced. Some ids (e.g. a specified species) have much more data than other ids, which makes  prediction may prefer to the rich-data ids.
+* Strain (even some species) prediction is terrible. Don't expected it.
+
+
+#### RefDB viruses classfication model
+
+Trainned with 9.3k viruses assemblies of RefDB.
 
 * model file: [refdb_viruses_model_gs_k23_l3000_rand_model_299](https://www.amazon.com/clouddrive/share/RmoJ1lduzlqstAJFnKg0aAlx82AyCjnzKncfGjQIQMg) [size: 5.3G]
 
@@ -87,7 +98,9 @@ For more complete examples please see the notebooks:
 
   **md5sum** 5eea8a98d224b7ff505091bd483ca75c 
 
-#### refdb bacteria classfication model
+#### RefDB bacteria classfication model
+
+Trainned with 42k bacteria assemblies of RefDB.
 
 * model file: [refdb_bacteria_model_gs_k23_l3000_rand_model_214](https://www.amazon.com/clouddrive/share/LoXz6k229SwYuElPTHvu0SSJOq56nJenvBbOTGVeb9a) [size: 11G]
 
