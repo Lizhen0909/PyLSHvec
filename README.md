@@ -15,7 +15,9 @@ Python codes and examples to uses these models are also provided.
 2. Jnius >=1.1.0
 3. java >=1.8
 
-## JLSHvec jar file
+## Download 
+
+### JLSHvec jar file
   The pre-trained models were trained with a rewritten  [LSHVec](https://github.com/Lizhen0909/LSHVec) in java. 
   The assembly jar file is needed to load the models.
 
@@ -25,9 +27,9 @@ Python codes and examples to uses these models are also provided.
 
 
 
-## Pre-trained model
+### Pre-trained model
 
-### refdb viruses classfication model
+#### refdb viruses classfication model
 
 * model file: [refdb_viruses_model_gs_k23_l3000_rand_model_299](https://www.amazon.com/clouddrive/share/RmoJ1lduzlqstAJFnKg0aAlx82AyCjnzKncfGjQIQMg) [size: 5.3G]
 
@@ -37,7 +39,7 @@ Python codes and examples to uses these models are also provided.
 
   **md5sum** 5eea8a98d224b7ff505091bd483ca75c 
 
-### refdb bacteria classfication model
+#### refdb bacteria classfication model
 
 * model file: [refdb_bacteria_model_gs_k23_l3000_rand_model_214](https://www.amazon.com/clouddrive/share/LoXz6k229SwYuElPTHvu0SSJOq56nJenvBbOTGVeb9a) [size: 11G]
 
@@ -47,7 +49,7 @@ Python codes and examples to uses these models are also provided.
 
   **md5sum** 5eea8a98d224b7ff505091bd483ca75c 
 
-## Sample data
+### Sample data
 
 * ActinoMock Nanopore Sample [size: 500M].
 
