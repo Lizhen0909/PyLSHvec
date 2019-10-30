@@ -27,6 +27,16 @@ Python codes and examples to uses these models are also provided.
 
   **md5sum** 5eea8a98d224b7ff505091bd483ca75c 
 
+### refdb bacteria classfication model
+
+* model file: [refdb_bacteria_model_gs_k23_l3000_rand_model_214](https://www.amazon.com/clouddrive/share/LoXz6k229SwYuElPTHvu0SSJOq56nJenvBbOTGVeb9a) [size: 11G]
+
+  **md5sum** 402e9a286b71068999caa9766b2dbf8c 
+
+* hash function file: [lsh_nt_NonEukaryota_k23_h25.crp](https://www.amazon.com/clouddrive/share/6ZNvMXMy30b4vc0RYNVG1lbf1ih8WgpoQ9w4lX91IXy)
+
+  **md5sum** 5eea8a98d224b7ff505091bd483ca75c 
+
 ## Sample data
 
 * ActinoMock Nanopore Sample [size: 500M].
