@@ -22,12 +22,12 @@ Python codes and examples to uses these models are also provided.
 git clone https://github.com/Lizhen0909/PyLSHvec.git && cd pylshvec && python setup.py install
 ```
 
-### use pip
+### or use pip
 ```bash
 pip install pylshvec
 ```
 
-### use docker
+### or use docker
 ```bash
 docker pull lizhen0909/pylshvec
 ```
@@ -80,4 +80,3 @@ docker pull lizhen0909/pylshvec
   
   **md5sum**: b7f3e55438fdc05920aee693a98ded2e
 
-## How to run
