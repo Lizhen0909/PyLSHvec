@@ -11,7 +11,7 @@ Python codes and examples to uses these models are also provided.
 
 ## Remark
 
-### What is JLSHVec ? Why JLSHVec? 
+### What is JLSHVec ? Why JLSHVec instead of LSHVec? 
 
 JLSHVec is a rewritten version of [LSHVec](https://github.com/Lizhen0909/LSHVec) in Java language. 
 
@@ -19,8 +19,16 @@ When we use LSHVec with big dataset (e.g. [GenBank](https://www.ncbi.nlm.nih.gov
 
 The reason is that LSHVec which inherits from [FastText](https://fasttext.cc/) requires the input is text format separated by white space and then loads all the text in memory. This is acceptable for natural languages since the data size is at most tens GBs.
 
-However in LSHVec k-mers are used instead of words. Suppose we want to train a k-mer embedding of simulated Illumina reads with RefDB bacteria assemblies (about 500G genetic bits). The number of kmers is about D*n, where D is the assembly data size and n is coverage. In our case, assuming n=10 and k=23, the number of kmers is 5T and requires a disk space of 125TB, which is unrealistic even for most HPC systems.
+However in LSHVec k-mers are used instead of words. Suppose we want to train a k-mer embedding of simulated Illumina reads with RefDB bacteria assemblies (about 500G genetic bits). The number of kmers is about D*n, where D is the assembly data size and n is coverage. In our case, assuming n=10 and k=23, the number of kmers is 5T and requires a disk space of 125TB and tens TB of memory, which is unrealistic even for most HPC systems.
 
+### How were JSLVec pre-trained models trained ?
+First we prepared a RockDB for the reference sequences (e.g. all RefDB bacteria assemblies). 
+
+Then we have several nodes to train the model: one node (train node) trains the vectors and others (hash nodes) generate and hash kmers. The nodes pass protocol-buf message with a Redis server. 
+
+Hash node randomly reads reference sequences from RockDB, simulates (e.g. simulations Illumina, Pacbio, Gold Standard) reads, generates kmers and hashes them, then feeds the hashed-kmer-sequences to a Redis queue.
+
+Train node reads from the Redis queue and does jobs of embedding or classification training.  Our training code supports hierarchical softmax using NCBI taxonomy tree, which is essential for multi-label(an instance can have a label for each rank) and multi-class(an instance can only have one label for a rank)  mixture classification model.
 
 ## Requirements
 
