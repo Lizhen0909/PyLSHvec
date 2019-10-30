@@ -31,8 +31,37 @@ pip install pylshvec
 ```bash
 docker pull lizhen0909/pylshvec
 ```
+## How to use
 
+Put things simply, just
 
+```python
+from pylshvec import *
+
+#here needs jlshvec jar file, download it first
+set_lshvec_jar_path("/mnt/jlshvec-assembly-0.1.jar")
+
+#since vector model is usually large, set a big java memory limit is preferred. 
+add_java_options("-Xmx32G")
+
+#here need model file and lsh function file, download them first
+#use help(model) to see all the methods and constructor options 
+model= LSHVec(model_file="/mnt/ refdb_viruses_model_gs_k23_l3000_rand_model_299", 
+              hash_file="/mnt/lsh_nt_NonEukaryota_k23_h25.crp")
+
+reads = ['ACGTACGT.....', 'ACGTACGT.....', 'ACGTACGT.....', 'ACGTACGT.....', ....]
+
+predicts = model.predict(reads)
+
+```
+
+For more complete examples please see the notebooks:
+
+[example_use_virus_classfication_model.ipynb](notebook/example_use_virus_classfication_model.ipynb)
+
+[example_use_bacteria_classfication_model.ipynb](notebook/example_use_bacteria_classfication_model.ipynb)
+
+[example_use_vectors_in_bacteria_classfication_model.ipynb](notebook/example_use_vectors_in_bacteria_classfication_model.ipynb)
 
 ## Download 
 
@@ -102,6 +131,8 @@ Hash node randomly reads reference sequences from RockDB, simulates (e.g. simula
 Train node reads from the Redis queue and does jobs of embedding or classification training.  Our training code supports hierarchical softmax using NCBI taxonomy tree, which is essential for multi-label(an instance can have a label for each rank) and multi-class(an instance can only have one label for a rank)  mixture classification model.
 
 ## Citation
+
+Please cite:
 
 [A Vector Representation of DNA Sequences Using Locality Sensitive Hashing](https://www.biorxiv.org/content/biorxiv/early/2019/08/06/726729.full.pdf)
 ## License 
