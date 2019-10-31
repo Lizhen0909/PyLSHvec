@@ -110,6 +110,14 @@ Trainned with 42k bacteria assemblies of RefDB.
 
   **md5sum** 5eea8a98d224b7ff505091bd483ca75c 
 
+#### GenBank bacteria classfication model (Illumina Simulation)
+
+ Come soon.
+
+#### GenBank bacteria classfication model (Pacbio Simulation)
+
+Come soon.
+
 ### Sample data
 
 * ActinoMock Nanopore Sample [size: 500M].
