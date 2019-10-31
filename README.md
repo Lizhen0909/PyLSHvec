@@ -55,13 +55,17 @@ predicts = model.predict(reads)
 
 ```
 
-For more complete examples please see the notebooks:
+For more complete examples please see the notebooks (see [Download](#download) for minimum memory requirement):
 
 [example_use_virus_classfication_model.ipynb](notebook/example_use_virus_classfication_model.ipynb)
 
 [example_use_bacteria_classfication_model.ipynb](notebook/example_use_bacteria_classfication_model.ipynb)
 
 [example_use_vectors_in_bacteria_classfication_model.ipynb](notebook/example_use_vectors_in_bacteria_classfication_model.ipynb)
+
+[example_use_Illumina_bacteria_classfication_model.ipynb](notebook/example_use_Illumina_bacteria_classfication_model.ipynb)
+
+[example_use_Pacbio_bacteria_classfication_model.ipynb](notebook/example_use_Pacbio_bacteria_classfication_model.ipynb)
 
 ## Download 
 
