@@ -68,6 +68,20 @@ For more complete examples please see the notebooks (see [Download](#download) f
 
 [example_use_Pacbio_bacteria_classfication_model.ipynb](notebook/example_use_Pacbio_bacteria_classfication_model.ipynb)
 
+### Use Docker
+Assume you put your data in /mnt/data and your notebook in /mnt/notebook. 
+
+* run python or ipython
+```bash
+docker run -v /mnt/data:/data -it lizhen0909/pylshvec python #or ipython
+```
+* run Jupyter notebook 
+
+```bash
+docker run -v /mnt/data:/data -v /mnt/notebook:/notebook -p 8888:8888  -it lizhen0909/pylshvec jupyter_notebook
+```
+Find connection url in the console output.
+
 ## Download 
 
 ### JLSHVec jar file
@@ -77,7 +91,6 @@ For more complete examples please see the notebooks (see [Download](#download) f
   [Download jlshvec-assembly-0.1.jar](https://www.amazon.com/clouddrive/share/4NiogpuW1lzBMyGmMlkrDbjhSMYpQgWjW5GUcKFR7Q6)
   
   **md5sum**: aeb207b983b3adc27e14fd9c431e2130
-
 
 
 ### Pre-trained models
