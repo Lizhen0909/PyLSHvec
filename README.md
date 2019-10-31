@@ -12,8 +12,9 @@ Python codes and examples to uses these models are also provided.
 ## Requirements
 
 1. Python 3.6
-2. Jnius >=1.1.0
-3. java >=1.8
+2. cython>=0.28.5
+3. Jnius >=1.1.0
+4. java >=1.8
 
 ## Install
 
