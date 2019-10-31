@@ -20,7 +20,7 @@ Python codes and examples to uses these models are also provided.
 
 ### build from source
 ```bash
-git clone https://github.com/Lizhen0909/PyLSHvec.git && cd pylshvec && python setup.py install
+git clone https://github.com/Lizhen0909/PyLSHvec.git && cd PyLSHvec && python setup.py install
 ```
 
 ### or use pip
