@@ -47,7 +47,7 @@ add_java_options("-Xmx32G")
 
 #here need model file and lsh function file, download them first
 #use help(model) to see all the methods and constructor options 
-model= LSHVec(model_file="/mnt/ refdb_viruses_model_gs_k23_l3000_rand_model_299", 
+model= LSHVec(model_file="/mnt/refdb_viruses_model_gs_k23_l3000_rand_model_299", 
               hash_file="/mnt/lsh_nt_NonEukaryota_k23_h25.crp")
 
 reads = ['ACGTACGT.....', 'ACGTACGT.....', 'ACGTACGT.....', 'ACGTACGT.....', ....]
