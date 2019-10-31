@@ -88,7 +88,7 @@ Here are issues I can think of:
 
 #### RefDB viruses classfication model
 
-Trainned with 9.3k viruses assemblies of RefDB.
+Trainned with 9.3k viruses assemblies of RefDB. Minimum Java memory: 16G.
 
 * model file: [refdb_viruses_model_gs_k23_l3000_rand_model_299](https://www.amazon.com/clouddrive/share/RmoJ1lduzlqstAJFnKg0aAlx82AyCjnzKncfGjQIQMg) [size: 5.3G]
 
@@ -100,7 +100,7 @@ Trainned with 9.3k viruses assemblies of RefDB.
 
 #### RefDB bacteria classfication model
 
-Trainned with 42k bacteria assemblies of RefDB.
+Trainned with 42k bacteria assemblies of RefDB. Minimum Java memory: 32G.
 
 * model file: [refdb_bacteria_model_gs_k23_l3000_rand_model_214](https://www.amazon.com/clouddrive/share/LoXz6k229SwYuElPTHvu0SSJOq56nJenvBbOTGVeb9a) [size: 11G]
 
@@ -110,14 +110,38 @@ Trainned with 42k bacteria assemblies of RefDB.
 
   **md5sum** 5eea8a98d224b7ff505091bd483ca75c 
 
-#### GenBank bacteria classfication model (Illumina Simulation)
+#### GenBank bacteria and viruses classfication model (Illumina Simulation)
 
- Come soon.
+Trainned with 560k assemblies from GenBank. **Only one assembly was sampled for each species.** Because viruses data is too samll compared to bateria, it rarely predicts any viruses. Just take it as a bateria model.  
 
-#### GenBank bacteria classfication model (Pacbio Simulation)
+[art_illumina](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3278762/) was used to simulate the paired-end reads with length of 150, mean size of 270 and stddev of 27. 
 
-Come soon.
+Minimum Java memory: 48G.
 
+* model file: [genbank_model_ill_k23_model_299](todo) [size: 12G]
+
+  **md5sum** d6b117a4c7ffe4f25e6c532a88bb3a47 
+
+* hash function file: [lsh_CAMI2_illumina_k23_h25.crp](todo)
+  
+  **md5sum** 706633919e347f920ce6ab3277091efb 
+  
+#### GenBank bacteria and viruses classfication model (Pacbio Simulation)
+
+Trainned with 560k assemblies from GenBank. **Only one assembly was sampled for each species.** Because viruses data is too samll compared to bateria, it rarely predicts any viruses. Just take it as a bateria model.  
+
+[pbsim](https://github.com/pfaucon/PBSIM-PacBio-Simulator) was used to simulate the pacbio reads with Continuous Long Read (CLR) profile, mean size of 3000 and stddev of 1000. 
+
+Minimum Java memory: 16G.
+
+* model file: [genbank_model_pb_k9_model_299](todo) [size: 121M]
+
+  **md5sum** 351275531493a4866be4afcd9df3932c 
+
+* hash function file: [lsh_CAMI2_pacbio_k9_h25.crp](todo)
+  
+  **md5sum** df7ee38cf8b58d5f8034bb9b266e3334 
+  
 ### Sample data
 
 * ActinoMock Nanopore Sample [size: 500M].
