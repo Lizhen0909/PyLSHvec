@@ -80,7 +80,7 @@ docker run -v /mnt/data:/data -it lizhen0909/pylshvec python #or ipython
 ```bash
 docker run -v /mnt/data:/data -v /mnt/notebook:/notebook -p 8888:8888  -it lizhen0909/pylshvec jupyter_notebook
 ```
-Find connection url in the console output.
+   Find connection url in the console output.
 
 ## Download 
 
@@ -136,11 +136,11 @@ Trainned with 560k assemblies from GenBank. **Only one assembly was sampled for 
 
 Minimum Java memory: 48G.
 
-* model file: [genbank_model_ill_k23_model_299](todo) [size: 12G]
+* model file: [genbank_model_ill_k23_model_299](https://www.amazon.com/clouddrive/share/zQnu2ti1vfBMGcXrRqsohgfzuaYzZs4HGESP58vobRn) [size: 12G]
 
   **md5sum** d6b117a4c7ffe4f25e6c532a88bb3a47 
 
-* hash function file: [lsh_CAMI2_illumina_k23_h25.crp](todo)
+* hash function file: [lsh_CAMI2_illumina_k23_h25.crp](https://www.amazon.com/clouddrive/share/efWceiTHId4EVhY1DEppmW6amyBQoEt3iIU6oW5FbcX)
   
   **md5sum** 706633919e347f920ce6ab3277091efb 
   
@@ -152,11 +152,11 @@ Trainned with 560k assemblies from GenBank. **Only one assembly was sampled for 
 
 Minimum Java memory: 16G.
 
-* model file: [genbank_model_pb_k9_model_299](todo) [size: 121M]
+* model file: [genbank_model_pb_k9_model_299](https://www.amazon.com/clouddrive/share/OmU9cmVKknacpt0W9HpI6QY2jXC17dQpWaaERpLhOGl) [size: 121M]
 
   **md5sum** 351275531493a4866be4afcd9df3932c 
 
-* hash function file: [lsh_CAMI2_pacbio_k9_h25.crp](todo)
+* hash function file: [lsh_CAMI2_pacbio_k9_h25.crp](https://www.amazon.com/clouddrive/share/zw4JwJCE4Lst5I4q36ijwrhc3db9rHYsCuyQ4KkihVC)
   
   **md5sum** df7ee38cf8b58d5f8034bb9b266e3334 
   
