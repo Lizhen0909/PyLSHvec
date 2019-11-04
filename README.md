@@ -130,7 +130,7 @@ Trainned with 42k bacteria assemblies of RefDB. Minimum Java memory: 32G.
 
 #### GenBank bacteria and viruses classfication model (Illumina Simulation)
 
-Trainned with 560k assemblies from GenBank. **Only one assembly was sampled for each species.** Because viruses data is too samll compared to bateria, it rarely predicts any viruses. Just take it as a bateria model.  
+Trainned with 54k assemblies from GenBank. **Only one assembly was sampled for each species.** Because viruses data is too samll compared to bateria, it rarely predicts any viruses. Just take it as a bateria model.  
 
 [art_illumina](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3278762/) was used to simulate the paired-end reads with length of 150, mean size of 270 and stddev of 27. 
 
@@ -146,7 +146,7 @@ Minimum Java memory: 48G.
   
 #### GenBank bacteria and viruses classfication model (Pacbio Simulation)
 
-Trainned with 560k assemblies from GenBank. **Only one assembly was sampled for each species.** Because viruses data is too samll compared to bateria, it rarely predicts any viruses. Just take it as a bateria model.  
+Trainned with 54k assemblies from GenBank. **Only one assembly was sampled for each species.** Because viruses data is too samll compared to bateria, it rarely predicts any viruses. Just take it as a bateria model.  
 
 [pbsim](https://github.com/pfaucon/PBSIM-PacBio-Simulator) was used to simulate the pacbio reads with Continuous Long Read (CLR) profile, mean size of 3000 and stddev of 1000. 
 
