@@ -32,6 +32,12 @@ pip install pylshvec
 ```bash
 docker pull lizhen0909/pylshvec
 ```
+
+### or use singularity 3
+```bash
+singularity pull --name pylshvec.sif shub://Lizhen0909/PyLSHvec
+```
+
 ## How to use
 
 Put things simply, just
@@ -81,6 +87,20 @@ docker run -v /mnt/data:/data -it lizhen0909/pylshvec python #or ipython
 docker run -v /mnt/data:/data -v /mnt/notebook:/notebook -p 8888:8888  -it lizhen0909/pylshvec jupyter_notebook
 ```
    Find connection url in the console output.
+   
+### Use Singularity
+
+Since singularity maps the $HOME directory, here just assumes data/model are going to locate in $HOME. Otherwise, you need map the directories like docker.
+
+* run python or ipython
+```bash
+singularity run pylshvec.sif python #the nrun any pylshvec code 
+```
+* run Jupyter notebook 
+```bash
+#It should work, however singularity maps too many things that host settings may affect the notebook
+singularity run  --bind $HOME/notebook:/notebook pylshvec.sif jupyter_notebook 
+```
 
 ## Download 
 
